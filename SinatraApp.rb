@@ -1,6 +1,8 @@
 require 'sinatra/base'
 require 'sinatra/assetpack'
 require 'sinatra'
+require 'sass'
+require 'coffee_script'
 
 class App < Sinatra::Base
   
@@ -28,7 +30,7 @@ class App < Sinatra::Base
   }
   
   get '/' do
-    haml :index
+    erb :index
   end
   
   run!
